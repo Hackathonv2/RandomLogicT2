@@ -20,3 +20,19 @@ except IndexError as e:
     exit(0)
 
 mapper = dict()
+for i in values:
+    if i in mapper:
+        mapper[i] += 1
+    else:
+        mapper[i] = 1
+(big_count, big_value) = (0, 0)
+(smol_count, smol_value) = (100, 100)
+for i in mapper:
+    if big_count < mapper[i] or ((big_count is mapper[i]) and (big_value < i)):
+        big_count = mapper[i]
+        big_value = i
+    if smol_count > mapper[i] or ((smol_count is mapper[i]) and (smol_value > i)):
+        smol_count = mapper[i]
+        smol_value = i
+
+print(big_value - smol_value)
