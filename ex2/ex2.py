@@ -25,6 +25,7 @@ common1 = get_common(str1, str2)
 common2 = get_common(str2, str1)
 if (common1 == common2):
     print("TEMPETE")
-    print(common1, end="")
+    print(common1)
 else:
-    print("NORMAL", end="")
+    print("NORMAL")
+    

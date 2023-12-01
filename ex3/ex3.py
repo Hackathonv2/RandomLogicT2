@@ -24,5 +24,5 @@ for i in range(1, nbr_relations + 1):
     relations[control].append(controlled)
 
 top_control = max(relations, key=lambda k: len(relations[k]))
-print(top_control, end='')
+print(top_control)
 exit(top_control)
