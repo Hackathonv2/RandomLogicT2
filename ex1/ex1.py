@@ -1,14 +1,20 @@
-import argparse
+import sys
 
-parser = argparse.ArgumentParser()
-parser.add_argument('number', type=int, help='Enter a number from 1 to 1000')
-args = parser.parse_args()
+lines = []
+for line in sys.stdin:
+    lines.append(line.rstrip('\n'))
 
-if args.number < 1 or args.number > 1000:
+try:
+    nbr = int(lines[0])
+except ValueError:
+    print('Error: Input must be an integer')
+    exit(0)
+
+if nbr < 1 or nbr > 1000:
     print('Error: Number must be between 1 and 1000')
-    exit(1)
+    exit(0)
 
-n = args.number
+n = nbr
 for i in range (4):
     if n % 3 == 0:
         print(f"divided {n} by 3")
