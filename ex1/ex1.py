@@ -27,4 +27,3 @@ for i in range (4):
         n = n - 1
 
 print(n, end='')
-exit(n)
