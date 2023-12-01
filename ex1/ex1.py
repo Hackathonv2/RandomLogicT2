@@ -19,3 +19,5 @@ for i in range (4):
     else:
         print(f"subtracted {n} by 1")
         n = n - 1
+
+exit(n)
