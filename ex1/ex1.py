@@ -26,4 +26,5 @@ for i in range (4):
         print(f"subtracted {n} by 1")
         n = n - 1
 
-exit(int(n))
+print(n, end='')
+exit(n)
