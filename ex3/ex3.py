@@ -25,4 +25,3 @@ for i in range(1, nbr_relations + 1):
 
 top_control = max(relations, key=lambda k: len(relations[k]))
 print(top_control)
-exit(top_control)

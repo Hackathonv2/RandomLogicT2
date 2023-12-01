@@ -19,7 +19,7 @@ got_so_far = 0
 
 lines.sort(reverse=True)
 
-print(f"sum: {somme}, need to get: {need_to_get}, got: {got}")
+# print(f"sum: {somme}, need to get: {need_to_get}, got: {got}")
 while got < need_to_get:
     need_to_get_this_round = need_to_get - got
     closest_number = min(lines, key=lambda x: abs(x - need_to_get_this_round))
@@ -31,4 +31,4 @@ while got < need_to_get:
     got_so_far += closest_number
     lines.remove(closest_number)
 
-print(got_so_far)
+print(got_so_far, end='')
